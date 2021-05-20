@@ -650,6 +650,37 @@ span {
 }
 
 /* ==================
+    PORTFOLIO SECTION
+===================== */
+.jamaica {
+  grid-area: jamaica;
+}
+
+.hilton {
+  grid-area: hilton;
+}
+.hotels {
+  grid-area: hotels;
+}
+.dylans {
+  grid-area: dylans;
+}
+.dubdub {
+  grid-area: dubdub;
+}
+.hilton-ww {
+  grid-area: hilton-ww;
+}
+
+.portfolio {
+  grid-template-areas:
+  ". jamaica hilton hotels . "
+  ". dylans dubdub hilton-ww .";
+  row-gap: 3em;
+}
+
+
+/* ==================
     template page
 ===================== */
 
