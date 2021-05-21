@@ -48,7 +48,7 @@ img {
   line-height: 90vh;
   overflow-y: hidden;
 }
-.splash.display-none {
+.splash.hide {
   position: fixed;
   top: 0;
   left: 0;
@@ -60,7 +60,7 @@ img {
   text-align: center;
   opacity: 0;
   line-height: 90vh;
-  transition: all .5s ease-in;
+  transition: all 0.5s ease-out;
 }
 
 .fade-in {
@@ -68,15 +68,15 @@ img {
   animation: fadeIn 1s ease-in forwards;
 }
 
+
+
 @keyframes fadeIn {
   to {
     opacity: 1;
   }
 }
 
-@media (max-width: 600px) {
 
-}
 
 
 
@@ -94,14 +94,6 @@ strong {
 .accent-color {
   color: var(--secondary-darker);
 }
-
-/* .page-title,
-.subtitle {
-
-  grid-column: 2 / -2;
-  color: black;
-  text-align: left;
-} */
 
 .page-title {
   font-size: 3rem;
@@ -231,8 +223,6 @@ strong {
   justify-self: start;
 }
 
-.btn-form {
-}
 
 /* ==================
     general layout
@@ -475,7 +465,7 @@ span {
   max-height: 500px;
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   flex-direction: column;
 }
 
@@ -670,6 +660,7 @@ span {
 
 .port-item {
   cursor: pointer;
+  display: block;
 }
 
 .port-info {
