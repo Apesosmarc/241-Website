@@ -29,6 +29,8 @@ img {
   max-width: 100%;
 }
 
+
+
 /* ==================
     INTRO
 ===================== */
@@ -818,6 +820,10 @@ textarea {
   border-bottom: 10px solid black;
   letter-spacing: 8px;
   line-height: normal;
+}
+
+.display-none {
+  display: none;
 }
 
 @media (max-width: 450px) {
