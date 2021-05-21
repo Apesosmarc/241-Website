@@ -34,6 +34,7 @@ img {
 ===================== */
 
 .splash {
+  padding: 5em;
   position: fixed;
   top: 0;
   left: 0;
@@ -43,6 +44,7 @@ img {
   color: white;
   text-align: center;
   line-height: 90vh;
+  overflow-y: hidden;
 }
 .splash.display-none {
   position: fixed;
@@ -59,16 +61,21 @@ img {
   transition: all .5s ease-in;
 }
 
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
 @keyframes fadeIn {
   to {
     opacity: 1;
   }
 }
 
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 1s ease-in forwards;
+@media (max-width: 600px) {
+
 }
+
 
 
 /* ==================
@@ -181,10 +188,10 @@ strong {
 .section-title:first-child {
   margin-top: 0;
 }
-
 /* buttons */
 
 .btn {
+  text-align:center;
   text-transform: capitalize;
   font-weight: 900;
   padding: 0.5em 1.75em;
@@ -196,6 +203,7 @@ strong {
   box-shadow: 5px 5px black;
   transition: transform 0.1s;
   border: 1px solid black;
+  max-width: 180px;
 }
 
 .btn:hover {
@@ -230,7 +238,7 @@ strong {
 
 .main-grid {
   display: grid;
-  grid-template-columns: minmax(0.5em, 1fr) minmax(0px, 500px) minmax(
+  grid-template-columns: minmax(.5em, 1fr) minmax(0px, 500px) minmax(
       0.5em,
       1fr
     );
@@ -495,9 +503,10 @@ span {
 
 .btn-section {
   padding: 2em;
-  max-height: 120px;
+  max-height: 300px;
   display: flex;
   justify-content: center;
+  align-items:center;
   gap: 50px;
 }
 
@@ -512,12 +521,13 @@ span {
     height: 500px;
     width: 400px;
   }
-
-  /* .hero > * {
-    grid-column: 2 / span 2;
-  } */
 }
 
+@media (max-width:400px) {
+  .btn-section {
+    flex-direction:column;
+  }
+}
 
 
 
@@ -652,31 +662,72 @@ span {
 /* ==================
     PORTFOLIO SECTION
 ===================== */
-.jamaica {
-  grid-area: jamaica;
-}
-
-.hilton {
-  grid-area: hilton;
-}
-.hotels {
-  grid-area: hotels;
-}
-.dylans {
-  grid-area: dylans;
-}
-.dubdub {
-  grid-area: dubdub;
-}
-.hilton-ww {
-  grid-area: hilton-ww;
-}
-
 .portfolio {
-  grid-template-areas:
-  ". jamaica hilton hotels . "
-  ". dylans dubdub hilton-ww .";
-  row-gap: 3em;
+  row-gap: 2em;
+}
+
+.port-item {
+  cursor: pointer;
+}
+
+.port-info {
+  width: 500px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+  background-color: white;
+  border: 2px solid black;
+}
+
+#lightbox {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, .9);
+  display: none;
+}
+
+#lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media (min-width: 600px) {
+  .portfolio {
+    grid-template-areas:
+    ". jamaica hilton hotels . "
+    ". dylans dubdub hilton-ww .";
+    row-gap: 3em;
+  }
+
+  .jamaica {
+    grid-area: jamaica;
+  }
+  
+  .hilton {
+    grid-area: hilton;
+  }
+  .hotels {
+    grid-area: hotels;
+  }
+  .dylans {
+    grid-area: dylans;
+  }
+  .dubdub {
+    grid-area: dubdub;
+  }
+  .hilton-ww {
+    grid-area: hilton-ww;
+  }
+  
 }
 
 
@@ -767,4 +818,10 @@ textarea {
   border-bottom: 10px solid black;
   letter-spacing: 8px;
   line-height: normal;
+}
+
+@media (max-width: 450px) {
+  .title-logo {
+    font-size: 3.5em;
+  }
 }
