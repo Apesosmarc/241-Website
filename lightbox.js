@@ -20,8 +20,11 @@ portItem.forEach((item) => {
 
 lightbox.addEventListener("click", (e) => {
   if (e.target != lightbox) return;
+
+  //loops through all port items and closes them
   portInfos.forEach((item) => {
     item.classList.add("display-none");
   });
+
   lightbox.classList.remove("active");
 });

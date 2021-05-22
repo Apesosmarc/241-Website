@@ -1,5 +1,6 @@
 .vscode
-images
-pdf
+images/
+pdf/
+hamburgermenu.js
 contact.html
 about.html

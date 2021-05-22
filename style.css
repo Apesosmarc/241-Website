@@ -778,6 +778,7 @@ label {
  .form > button {
    margin-top: 2em;
    justify-self: center;
+   align-self: center;
    width:40%;
 
  }
@@ -785,6 +786,7 @@ label {
    justify-self: end;
    margin-right: 2em;
    align-self: center;
+   display: none;
  }
 
 
@@ -798,16 +800,15 @@ label {
 
   .form {
     grid-column: 2;
-     grid-template-columns:150px 1fr;
      width: 90%;
     padding: 2em;
-     justify-self: end;
      display: flex;
      flex-direction: column;
+     margin: 0 auto;
    } 
 }
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
   .contact-form {
     display: grid;
     grid-template-columns: 400px 1fr;
