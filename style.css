@@ -18,9 +18,9 @@
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  color: #222; 
+  color: #222;
   line-height: 1.6;
   overflow: hidden;
 }
@@ -28,8 +28,6 @@ body {
 img {
   max-width: 100%;
 }
-
-
 
 /* ==================
     INTRO
@@ -68,17 +66,11 @@ img {
   animation: fadeIn 1s ease-in forwards;
 }
 
-
-
 @keyframes fadeIn {
   to {
     opacity: 1;
   }
 }
-
-
-
-
 
 /* ==================
     Typography
@@ -133,15 +125,14 @@ strong {
 
 } */
 
-
 .hero-title {
   font-size: 2rem;
-  line-height: normal;
   font-weight: 700;
-  overflow-y:hidden;
-  line-height: 40px;
+  overflow-y: hidden;
+  line-height: 60px;
   margin: 0 0 16px;
   color: var(--secondary-darker);
+  text-transform: capitalize;
 }
 
 /* .hero-title::after {
@@ -155,21 +146,23 @@ strong {
 } */
 
 .hero-title-second {
-  color:var(--secondary-darker);
-  opacity: .8;
+  color: var(--secondary-darker);
+  opacity: 0.8;
+  margin-top: 2em;
 }
 
 .section-title {
   font-size: 1.4rem;
   color: #000;
   margin-top: 1.25em;
+  text-align: center;
 }
 
 .section-title::after {
   content: "";
   display: block;
   width: 80px;
-  margin-left: .5em;
+  margin-left: 0.5em;
   height: 3px;
   margin-top: 10px;
   background: var(--secondary-color);
@@ -186,7 +179,7 @@ strong {
 /* buttons */
 
 .btn {
-  text-align:center;
+  text-align: center;
   text-transform: capitalize;
   font-weight: 900;
   padding: 0.5em 1.75em;
@@ -224,14 +217,13 @@ strong {
   justify-self: start;
 }
 
-
 /* ==================
     general layout
 ===================== */
 
 .main-grid {
   display: grid;
-  grid-template-columns: minmax(.5em, 1fr) minmax(0px, 500px) minmax(
+  grid-template-columns: minmax(0.5em, 1fr) minmax(0px, 500px) minmax(
       0.5em,
       1fr
     );
@@ -255,8 +247,6 @@ strong {
 
 .header-home {
   width: 100%;
- 
-;
 }
 .header-content {
   background-color: #fff;
@@ -269,13 +259,12 @@ strong {
   border: 4px black solid;
   box-shadow: 4px 4px black;
   min-height: 100px;
-
 }
 
 .logo-link {
   text-decoration: none;
   font-size: 2rem;
-  padding: .4em;
+  padding: 0.4em;
 }
 
 span {
@@ -367,7 +356,6 @@ span {
     margin: 0 auto;
     max-width: 800px;
   }
-
 
   .nav-item {
     margin-left: 2em;
@@ -461,9 +449,7 @@ span {
   background-image: "";
   background-size: cover;
   background-position: center;
-  padding: 4em 0 4em;
-  color: white
-  max-height: 500px;
+  padding: 0 0 4em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -484,12 +470,10 @@ span {
   } */
 }
 
-
-
 .hero-text {
   max-width: 800px;
   min-height: 500px;
-  padding: 2em;
+  padding: 1em;
   margin-bottom: 1em;
   margin-right: 1em;
 }
@@ -499,14 +483,13 @@ span {
   max-height: 300px;
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   gap: 50px;
 }
 
-
 @media (min-width: 600px) {
   .hero {
-    padding: 8em 0 4em;
+    padding: 6em 0 4em;
   }
   .img-div {
     margin-right: 1em;
@@ -516,13 +499,11 @@ span {
   }
 }
 
-@media (max-width:400px) {
+@media (max-width: 400px) {
   .btn-section {
-    flex-direction:column;
+    flex-direction: column;
   }
 }
-
-
 
 /* ==================
     info section
@@ -541,10 +522,9 @@ span {
 .sec {
   background-color: var(--secondary-color);
   padding: 6em 0;
-  text-align: center;
 }
 
-.sec.even{
+.sec.even {
   background-color: var(--primary-color);
 }
 
@@ -566,8 +546,6 @@ span {
   transform: scale(1.1);
 }
 
-
-
 @media (min-width: 600px) {
   .col:first-child {
     grid-column: 2 / span 1;
@@ -575,12 +553,10 @@ span {
   .col {
     grid-column: span 1;
   }
-  
-.col-full {
-  grid-column: 2/-2;
 
-}
-  
+  .col-full {
+    grid-column: 2/-2;
+  }
 }
 
 /* ==================
@@ -609,8 +585,6 @@ span {
   margin-left: -90px;
   margin-top: 30px;
   grid-column: span 2;
-
- 
 }
 
 .info-block {
@@ -624,10 +598,9 @@ span {
   display: flex;
 }
 
-.about:nth-child(1){
+.about:nth-child(1) {
   margin-bottom: 5em;
 }
-
 
 .the-team {
   grid-row: 1;
@@ -644,7 +617,7 @@ span {
     justify-self: center;
     align-self: center;
   }
-  .rectangle{
+  .rectangle {
     grid-row: 2;
     grid-column: 3;
     margin-left: none;
@@ -654,7 +627,7 @@ span {
   }
   .info-block {
     padding: 1em 2em;
-    text-align:center;
+    text-align: center;
   }
 }
 
@@ -689,7 +662,7 @@ span {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0, .9);
+  background-color: rgba(0, 0, 0, 0.9);
   display: none;
 }
 
@@ -699,19 +672,18 @@ span {
   align-items: center;
 }
 
-
 @media (min-width: 600px) {
   .portfolio {
     grid-template-areas:
-    ". jamaica hilton hotels . "
-    ". dylans dubdub hilton-ww .";
+      ". jamaica hilton hotels . "
+      ". dylans dubdub hilton-ww .";
     row-gap: 3em;
   }
 
   .jamaica {
     grid-area: jamaica;
   }
-  
+
   .hilton {
     grid-area: hilton;
   }
@@ -727,19 +699,28 @@ span {
   .hilton-ww {
     grid-area: hilton-ww;
   }
-  
+}
+.talents-list > li {
+  overflow: visible;
 }
 
+.talents-col-1 {
+  padding: 0;
+}
+.talents-col-2 {
+  padding: 0 0 0 4em;
+}
+.divider {
+  width: 50px;
+}
 
 /* ==================
     template page
 ===================== */
 
-
 .main-template {
   padding: 4em 0;
 }
-
 
 .contact-form {
   grid-column: 2;
@@ -748,12 +729,14 @@ span {
   flex-direction: column;
 }
 
-input, textarea{
+input,
+textarea {
   transform: scale(1);
   transition: transform 250ms;
 }
 
-input:focus, textarea:focus{
+input:focus,
+textarea:focus {
   transform: scale(1.05);
 }
 
@@ -767,45 +750,24 @@ label {
   padding: 1em;
 }
 
- 
- .form > input textarea {
-   height: 100%;
-   min-width: 60%;
-   margin-top: 2em;
-   resize:none;
- }
+.form > input textarea {
+  height: 100%;
+  min-width: 60%;
+  margin-top: 2em;
+  resize: none;
+}
 
- .form > button {
-   margin-top: 2em;
-   justify-self: center;
-   align-self: center;
-   width:40%;
-
- }
- label {
-   justify-self: end;
-   margin-right: 2em;
-   align-self: center;
-   display: none;
- }
-
-
-@media (min-width: 600px) {
-  .contact-form {
-    grid-column: 2/5;
-  }
-  .secondary-text {
-   padding: 2em;
-  }
-
-  .form {
-    grid-column: 2;
-     width: 90%;
-    padding: 2em;
-     display: flex;
-     flex-direction: column;
-     margin: 0 auto;
-   } 
+.form > button {
+  margin-top: 2em;
+  justify-self: center;
+  align-self: center;
+  width: 40%;
+}
+label {
+  justify-self: end;
+  margin-right: 2em;
+  align-self: center;
+  display: none;
 }
 
 @media (min-width: 900px) {
@@ -814,13 +776,27 @@ label {
     grid-template-columns: 400px 1fr;
   }
 }
+@media (min-width: 600px) {
+  .contact-form {
+    grid-column: 2/5;
+  }
+  .secondary-text {
+    padding: 2em;
+  }
 
+  .form {
+    grid-column: 2;
+    width: 90%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}
 
 /* ==================
     form
 ===================== */
-
-
 
 label {
   font-weight: 700;
@@ -838,8 +814,6 @@ textarea {
   height: 100px;
 }
 
-
-
 .title-section {
   background-color: var(--secondary-color);
   padding: 0;
@@ -850,16 +824,16 @@ textarea {
   padding-top: 1em;
 }
 
-.title-section.even{
+.title-section.even {
   background-color: var(--primary-color);
 }
 
 .title-logo {
-  font-family: 'Bebas Neue', cursive;
+  font-family: "Bebas Neue", cursive;
   overflow-y: hidden;
   font-size: 5em;
-  color:var(--dark-color);
-  display:inline-block;
+  color: var(--dark-color);
+  display: inline-block;
   border-bottom: 10px solid black;
   letter-spacing: 8px;
   line-height: normal;
@@ -874,4 +848,3 @@ textarea {
     font-size: 3.5em;
   }
 }
-
