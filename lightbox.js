@@ -1,5 +1,6 @@
 const lightbox = document.createElement("div");
 const portInfos = [...document.querySelectorAll(".port-info")];
+const exitMarks = [...document.querySelectorAll(".x")];
 
 lightbox.id = "lightbox";
 document.body.appendChild(lightbox);
@@ -8,10 +9,7 @@ document.body.appendChild(lightbox);
 const portItem = [...document.querySelectorAll(".port-item")];
 portItem.forEach((item) => {
   item.addEventListener("click", (e) => {
-    console.log(e.target.id);
-    const target = e.target.id;
     const portInfo = document.querySelector(`#${e.target.id}-content`);
-    console.log(portInfo);
     lightbox.classList.add("active");
     portInfo.classList.remove("display-none");
     lightbox.appendChild(portInfo);
@@ -19,7 +17,7 @@ portItem.forEach((item) => {
 });
 
 lightbox.addEventListener("click", (e) => {
-  if (e.target != lightbox) return;
+  if (e.target != lightbox && !exitMarks.includes(e.target)) return;
 
   //loops through all port items and closes them
   portInfos.forEach((item) => {
