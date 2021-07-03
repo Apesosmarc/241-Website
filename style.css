@@ -758,6 +758,9 @@ span {
   .img-row-dylans {
     height: 70%;
   }
+  .exit-bar {
+    display: none;
+  }
 }
 
 /* ==================
