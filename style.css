@@ -662,8 +662,8 @@ span {
 @media (min-width: 600px) {
   .portfolio {
     grid-template-areas:
-      ". jamaica hilton hotels . "
-      ". dylans dubdub hilton-ww .";
+      ". jamaica dylans hotels . "
+      ". hilton bond45 hilton-ww .";
     row-gap: 3em;
   }
 
@@ -680,8 +680,8 @@ span {
   .dylans {
     grid-area: dylans;
   }
-  .dubdub {
-    grid-area: dubdub;
+  .bond45 {
+    grid-area: bond45;
   }
   .sophies {
     grid-area: hilton-ww;
@@ -706,7 +706,7 @@ span {
 
 .port-info {
   width: 900px;
-  height: 700px;
+  height: 750px;
   /* display: flex;
   flex-direction: column; */
 
@@ -718,19 +718,23 @@ span {
   overflow-x: hidden;
 }
 
+.port-info > .title-logo {
+  font-size: 3em;
+}
+
 #sophies-content > .title-logo {
   margin-top: 0;
   font-size: 1.8em;
 }
 .img-row {
-  margin: 1em 0;
+  margin: 2em 0;
   max-height: 350px;
   overflow: hidden;
   gap: 2em;
 }
 
 .port-content {
-  width: 80%;
+  width: 90%;
 }
 
 .port-content:last-child {
@@ -746,10 +750,13 @@ span {
     list-style: none;
   }
   .port-content {
-    width: 60%;
+    width: 45%;
   }
   .port-content:last-child {
     display: unset;
+  }
+  .img-row-dylans {
+    height: 70%;
   }
 }
 
