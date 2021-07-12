@@ -108,22 +108,6 @@ strong {
   font-size: 1.125rem;
   opacity: 0.85;
 }
-/* .subtitle1 {
-  margin: 0.5em 0 1em;
-  font-size: 1.125rem;
-  opacity: 0.85;
-}
-
-.subtitle1::after {
-  content: "";
-  display: block;
-  width: 29%;
-  height: 30px;
-  background: var(--secondary-light);
-  margin-top: -30px;
-  margin-left: 50px;
-
-} */
 
 .hero-title {
   font-size: 2rem;
@@ -192,6 +176,7 @@ strong {
   transition: transform 0.1s;
   border: 1px solid black;
   max-width: 180px;
+  min-width: 10px;
 }
 
 .btn:hover {
@@ -245,26 +230,21 @@ strong {
   background-color: var(--secondary-color);
 }
 
-.header-home {
+/* .header-home {
   width: 100%;
-}
+} */
 .header-content {
-  background-color: #fff;
-  padding: 1em;
+  background-color: inherit;
   display: flex;
-  grid-column: 2;
-  justify-content: space-between;
+  grid-column: 2/-2;
   align-items: center;
-  margin: 2em;
-  border: 4px black solid;
-  box-shadow: 4px 4px black;
+  justify-content: center;
   min-height: 100px;
 }
 
 .logo-link {
   text-decoration: none;
-  font-size: 2rem;
-  padding: 0.4em;
+  font-size: 1.8rem;
 }
 
 span {
@@ -298,11 +278,9 @@ span {
 .nav-list {
   display: flex;
   list-style: none;
-  margin: 0;
-  padding: 0;
   height: 100%;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-direction: column;
 }
 
@@ -312,6 +290,9 @@ span {
   font-weight: 700;
   text-transform: uppercase;
   color: #222;
+  display: inline-block;
+  padding: 20px;
+  margin-bottom: -10px;
 }
 
 .nav-link:hover,
@@ -335,17 +316,31 @@ span {
   background: 0;
   color: black;
   cursor: pointer;
-  padding: 0.5em;
   margin-left: auto;
-  font-size: 1.5em;
+  font-size: 1.5rem;
+}
+
+.mobile-btn {
+  font-size: 10px;
 }
 
 @media (min-width: 600px) {
+  .header-content {
+    grid-column: 2/5;
+    margin: 2em;
+    border: 4px black solid;
+    box-shadow: 4px 4px black;
+    background-color: var(--secondary-lightest);
+    padding: 1em 2em;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
   .open-nav,
   .close-nav {
     display: none;
   }
-
   .nav {
     position: initial;
     justify-content: center;
@@ -355,24 +350,27 @@ span {
     flex-direction: row;
     margin: 0 auto;
     max-width: 800px;
+    padding-inline-start: 0px;
   }
 
   .nav-item {
-    margin-left: 2em;
     cursor: pointer;
     letter-spacing: 2px;
+    overflow-y: hidden;
   }
-
-  .nav-link {
-    font-size: 1.1rem;
-  }
-
   .header-home .nav {
     background: transparent;
   }
+  .logo-link {
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 0.4em;
+  }
+}
 
-  .header-content {
-    grid-column: 2/5;
+@media (min-width: 800px) {
+  .nav-link {
+    font-size: 1.1rem;
   }
 }
 
@@ -702,6 +700,11 @@ span {
 
 .x {
   color: var(--primary-color);
+  cursor: pointer;
+}
+.x:hover {
+  opacity: 0.4;
+  cursor: pointer;
 }
 
 .port-info {
