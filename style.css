@@ -687,6 +687,7 @@ span {
 .x {
   color: var(--primary-color);
   cursor: pointer;
+  position: absolute;
 }
 .x:hover {
   opacity: 0.4;
@@ -697,25 +698,19 @@ span {
   width: 900px;
   height: 750px;
   min-height: 500px;
-  /* display: flex;
-  flex-direction: column; */
-
   padding: 2em;
   background-color: white;
   border: 2px solid black;
   text-align: center;
   overflow-y: hidden;
   overflow-x: hidden;
+  font-size: 0.8rem;
 }
 
 .port-info > .title-logo {
   font-size: 3em;
 }
 
-#sophies-content > .title-logo {
-  margin-top: 0;
-  font-size: 1.2em;
-}
 .img-row {
   margin: 2em 0;
   max-height: 350px;
@@ -727,11 +722,25 @@ span {
   width: 90%;
 }
 
+#sophies-content > .title-logo {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
 .port-content:last-child {
   display: none;
 }
 
 @media (min-width: 600px) {
+  .port-info {
+    font-size: 1rem;
+  }
+
+  #sophies-content > .title-logo {
+    margin: 0;
+    font-size: 3em;
+  }
+
   .img-row {
     display: flex;
     justify-content: center;
