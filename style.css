@@ -41,7 +41,7 @@ img {
   width: 100%;
   background-color: black;
   z-index: 200;
-  color: white;
+  color: var(--primary-light);
   text-align: center;
   line-height: 90vh;
   overflow-y: hidden;
@@ -54,7 +54,7 @@ img {
   height: 100vh;
   background-color: black;
   z-index: -10;
-  color: white;
+  color: var(--primary-light);
   text-align: center;
   opacity: 0;
   line-height: 90vh;
@@ -78,7 +78,8 @@ img {
 
 h1,
 h2,
-strong {
+strong,
+h4 {
   font-weight: 700;
   margin: 0;
 }
@@ -165,7 +166,7 @@ strong {
   box-shadow: 5px 5px black;
   transition: transform 0.1s;
   border: 1px solid black;
-  max-width: 180px;
+  max-width: 2000px;
   min-width: 20px;
 }
 
@@ -241,7 +242,7 @@ strong {
 
 .logo-link {
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: 3rem;
 }
 
 span {
@@ -325,7 +326,7 @@ span {
     margin: 2em 0;
     border: 4px black solid;
     box-shadow: 4px 4px black;
-    background-color: var(--secondary-lightest);
+    background-color: var(--primary-light);
     padding: 1em 2em;
   }
 
@@ -353,7 +354,7 @@ span {
   }
   .logo-link {
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 3rem;
     padding: 0.4em 0.4em 0.4em 0em;
   }
 }
@@ -437,59 +438,49 @@ span {
   background-image: "";
   background-size: cover;
   background-position: center;
-  padding: 0 0 4em;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.hero > * {
-  grid-column: 2 / -2;
-}
-
 .img-div {
   display: none;
-}
-
-@media (min-width: 400px) {
-  /* .hero > * {
-    margin-right: 20%;
-  } */
 }
 
 .hero-text {
   max-width: 800px;
   min-height: 500px;
-  padding: 1em;
-  margin-bottom: 1em;
-  margin-right: 1em;
 }
 
 .btn-section {
   padding: 2em;
-  max-height: 300px;
+  max-height: 500px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 50px;
+  margin-top: 3em;
 }
 
 @media (min-width: 600px) {
-  .hero {
-    padding: 6em 0 4em;
-  }
   .img-div {
     margin-right: 1em;
     overflow: hidden;
     height: 500px;
     width: 400px;
   }
+  .btn-section {
+    flex-direction: row;
+    font-size: 1em;
+  }
 }
 
 @media (max-width: 400px) {
   .btn-section {
     flex-direction: column;
+    font-size: 0.8em;
   }
 }
 
@@ -498,9 +489,9 @@ span {
 ===================== */
 
 .border {
-  border: 2px black solid;
+  border: 3px black solid;
   box-shadow: 10px 10px black;
-  background: white;
+  background: var(--primary-light);
 }
 
 .section-border {
@@ -512,13 +503,17 @@ span {
   padding: 6em 0;
 }
 
-.sec.even {
+.primary-color {
+  background-color: var(--primary-color);
+}
+.title-section.primary-color {
   background-color: var(--primary-color);
 }
 
+/* PORTFOLIO-GRID-COLUMN */
 .col {
   grid-column: 2 / -2;
-  border: 2px black solid;
+  border: 3px black solid;
   box-shadow: 10px 10px black;
   padding: 2em;
   background-color: #fff;
@@ -527,7 +522,13 @@ span {
 
 .col-full {
   grid-column: 2;
-  padding: 2em;
+  padding: 7em 3em 3em;
+  margin: 8em 0;
+}
+
+.mission {
+  margin: 0;
+  padding: 3em;
 }
 
 .col:hover {
@@ -551,7 +552,7 @@ span {
     SHAPES // ABOUT SECTION
 ===================== */
 .circle {
-  background-color: white;
+  background-color: var(--primary-light);
   height: 220px;
   width: 220px;
   border-radius: 50%;
@@ -562,12 +563,11 @@ span {
   background-repeat: no-repeat;
   background-position: 50%;
   z-index: 1;
-  /* grid-row: 1; */
   margin-right: 1em;
 }
 
 .rectangle {
-  background-color: #fff;
+  background-color: var(--primary-light);
   height: 140px;
   width: 900px;
   margin-left: -90px;
@@ -699,12 +699,12 @@ span {
   height: 750px;
   min-height: 500px;
   padding: 2em;
-  background-color: white;
+  background-color: #fff;
   border: 2px solid black;
-  text-align: center;
   overflow-y: hidden;
   overflow-x: hidden;
   font-size: 0.8rem;
+  text-align: center;
 }
 
 .port-info > .title-logo {
@@ -720,6 +720,7 @@ span {
 
 .port-content {
   width: 90%;
+  border: 1px solid black;
 }
 
 #sophies-content > .title-logo {
@@ -768,7 +769,6 @@ span {
 
 .talents-list > li {
   overflow: visible;
-  text-transform: capitalize;
 }
 
 .talents-col-1 {
