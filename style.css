@@ -348,7 +348,7 @@ span {
   }
 
   .nav-link {
-    font-size: 2rem;
+    font-size: 1.3rem;
   }
   .open-nav,
   .close-nav {
@@ -377,12 +377,6 @@ span {
     padding: 0.4em 0.4em 0.4em 0em;
   }
 }
-/* 
-@media (min-width: 800px) {
-  .nav-link {
-    font-size: 1rem;
-  }
-} */
 
 /* footer */
 
