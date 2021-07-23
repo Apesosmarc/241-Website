@@ -5,7 +5,7 @@
   --secondary-lighter: #fbd3e2;
   --secondary-lightest: #fef6f9;
   --secondary-darker: #d7477d;
-  --primary-light: #f1fbfe;
+  --primary-light: #fff;
   --primary-dark: #477e94;
 
   --dark-color: #231f20;
@@ -572,12 +572,20 @@ span {
   border-radius: 50%;
   border: black 3px solid;
   grid-column: 2;
-  background-image: url(images/headshots/MaryHeadshot.JPG);
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50%;
   z-index: 1;
   margin-right: 1em;
+}
+
+.circle-mary-pic {
+  background-image: url(images/headshots/MaryHeadshot.JPG);
+}
+
+.circle-jp-pic {
+  background-image: url(images/headshots/JP.jfif);
 }
 
 .rectangle {
