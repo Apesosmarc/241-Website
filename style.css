@@ -26,7 +26,7 @@ body {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
 }
 
 /* ==================
@@ -84,6 +84,14 @@ h4 {
   margin: 0;
 }
 
+strong {
+  color: var(--secondary-darker);
+}
+
+p {
+  line-height: 2.1em;
+}
+
 .accent-color {
   color: var(--secondary-darker);
 }
@@ -122,7 +130,7 @@ h4 {
 
 .hero-title-second {
   color: var(--secondary-darker);
-  opacity: 0.8;
+  opacity: 0.85;
   margin-top: 2em;
 }
 
@@ -316,6 +324,12 @@ span {
 
 .mobile-btn {
   font-size: 10px;
+}
+
+@media (min-width: 800px) {
+  .nav-link {
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 600px) {
@@ -568,7 +582,7 @@ span {
 
 .rectangle {
   background-color: var(--primary-light);
-  height: 140px;
+  height: 170px;
   width: 900px;
   margin-left: -90px;
   margin-top: 30px;
@@ -622,7 +636,7 @@ span {
   row-gap: 2em;
 }
 
-.port-item {
+.port-img-container {
   cursor: pointer;
   display: block;
 }
@@ -718,9 +732,35 @@ span {
   gap: 2em;
 }
 
+.img-row-hero {
+  margin: 2em 0;
+  max-height: 350px;
+  overflow: hidden;
+  gap: 2em;
+}
+
 .port-content {
   width: 90%;
   border: 1px solid black;
+}
+
+.port-content-hero {
+  width: 100%;
+}
+
+.port-copy {
+  display: flex;
+  font-size: 1rem;
+}
+
+.port-copy > p {
+  width: 70%;
+  margin: auto;
+}
+
+.port-list {
+  width: 60%;
+  margin: auto;
 }
 
 #sophies-content > .title-logo {
@@ -732,9 +772,15 @@ span {
   display: none;
 }
 
+@media (min-width: 1000px) {
+  .exit-bar {
+    display: none;
+  }
+}
+
 @media (min-width: 600px) {
   .port-info {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   #sophies-content > .title-logo {
@@ -746,20 +792,20 @@ span {
     display: flex;
     justify-content: center;
   }
-  .port-list {
-    list-style: none;
-  }
   .port-content {
-    width: 45%;
+    align-self: center;
   }
+
   .port-content:last-child {
     display: unset;
   }
-  .img-row-dylans {
-    height: 70%;
+
+  .port-copy {
+    font-size: 1.2rem;
   }
-  .exit-bar {
-    display: none;
+
+  .port-content-hero {
+    width: 60%;
   }
 }
 
@@ -812,6 +858,10 @@ label {
   margin-right: 2em;
 }
 
+.talents-list {
+  list-style: none;
+}
+
 .form {
   display: grid;
   padding: 1em;
@@ -837,7 +887,7 @@ label {
   display: none;
 }
 
-.port-list {
+.port-list-item {
   margin-top: 5px;
 }
 
@@ -863,7 +913,7 @@ label {
     flex-direction: column;
     margin: 0 auto;
   }
-  .port-list {
+  .port-list-item {
     font-size: 1.1em;
   }
 }
