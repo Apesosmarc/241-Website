@@ -45,6 +45,9 @@ img {
   color: var(--primary-light);
   text-align: center;
   overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .splash.hide {
   position: fixed;
