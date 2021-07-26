@@ -255,6 +255,7 @@ p {
 .logo-link {
   text-decoration: none;
   font-size: 3rem;
+  letter-spacing: 0.1em;
 }
 
 span {
@@ -699,7 +700,6 @@ span {
 
 .exit-bar {
   font-size: 2em;
-  margin: -20px 10px 10px;
   display: flex;
   justify-content: flex-end;
   font-weight: bold;
@@ -724,7 +724,7 @@ span {
   border: 2px solid black;
   overflow-y: hidden;
   overflow-x: hidden;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   text-align: center;
 }
 
@@ -739,6 +739,9 @@ span {
   gap: 2em;
 }
 
+.img-row-dylans {
+  max-height: 400px;
+}
 .img-row-hero {
   margin: 2em 0;
   max-height: 350px;
@@ -750,6 +753,9 @@ span {
   width: 90%;
   border: 1px solid black;
 }
+
+/* 
+SINGLE IMAGE HERO FOR HILTON HOTELS  */
 
 .port-content-hero {
   width: 100%;
@@ -766,7 +772,7 @@ span {
 }
 
 .port-list {
-  width: 60%;
+  width: 80%;
   margin: auto;
 }
 
@@ -783,11 +789,26 @@ span {
   .exit-bar {
     display: none;
   }
+
+  .title-logo {
+    margin-bottom: 0.8em;
+  }
+
+  /* IMAGE ROW FOR SINGLE IMAGE */
+  .img-row-hero {
+    max-height: 650px;
+  }
+
+  /* IMAGE ROW FOR DOUBLE IMAGES */
+  .img-row {
+    margin-bottom: 3em;
+  }
 }
 
 @media (min-width: 600px) {
   .port-info {
     font-size: 1.1rem;
+    height: 900px;
   }
 
   #sophies-content > .title-logo {
@@ -796,11 +817,18 @@ span {
   }
 
   .img-row {
+    max-height: 500px;
     display: flex;
     justify-content: center;
   }
+
   .port-content {
     align-self: center;
+  }
+
+  .img-row-hero {
+    max-height: 450px;
+    margin-bottom: 1em;
   }
 
   .port-content:last-child {
@@ -809,10 +837,12 @@ span {
 
   .port-copy {
     font-size: 1.2rem;
+    margin-top: 2em;
   }
-
   .port-content-hero {
-    width: 60%;
+    width: 80%;
+  }
+  .exit-bar {
   }
 }
 
