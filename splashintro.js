@@ -1,7 +1,13 @@
 const splash = document.querySelector(".splash");
 
-document.addEventListener("DOMContentLoaded", (e) => {
-  setTimeout(() => {
-    splash.classList.add("hide");
-  }, 2000);
-});
+if (!document.cookie) {
+  document.addEventListener("DOMContentLoaded", (e) => {
+    setTimeout(() => {
+      splash.classList.add("hide");
+    }, 2000);
+  });
+
+  document.cookie = "visited";
+} else {
+  splash.remove();
+}
