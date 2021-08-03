@@ -295,6 +295,7 @@ span {
 
 .nav-link:hover {
   opacity: 0.7;
+  color: var(--secondary-color);
 }
 
 .open-nav {
@@ -304,12 +305,6 @@ span {
   cursor: pointer;
   margin-left: auto;
   font-size: 2rem;
-}
-
-@media (min-width: 800px) {
-  .nav-link {
-    font-size: 1rem;
-  }
 }
 
 @media (min-width: 600px) {
@@ -324,7 +319,8 @@ span {
   }
 
   .nav-link {
-    font-size: 1.3rem;
+    font-size: 1rem;
+    padding: 0.3em;
   }
   .open-nav,
   .close-nav {
@@ -351,6 +347,12 @@ span {
     text-decoration: none;
     font-size: 3rem;
     padding: 0.4em 0.4em 0.4em 0em;
+  }
+}
+
+@media (min-width: 800px) {
+  .nav-link {
+    font-size: 1.3rem;
   }
 }
 
@@ -410,7 +412,7 @@ span {
 
 .border {
   border: 3px black solid;
-  box-shadow: 10px 10px black;
+
   background: var(--primary-light);
 }
 
@@ -441,14 +443,14 @@ span {
 }
 
 .col-full {
-  grid-column: 2;
-  padding: 7em 3em 3em;
+  grid-column: 1/-1;
+  padding: 7em 1em 3em;
   margin: 8em 0;
 }
 
 .mission {
   margin: 0;
-  padding: 3em;
+  padding: 3em 1em;
 }
 
 .col:hover {
@@ -456,6 +458,9 @@ span {
 }
 
 @media (min-width: 600px) {
+  .border {
+    box-shadow: 10px 10px black;
+  }
   .col:first-child {
     grid-column: 2 / span 1;
   }
@@ -465,6 +470,9 @@ span {
 
   .col-full {
     grid-column: 2/-2;
+  }
+  .mission {
+    padding: 3em;
   }
 }
 
@@ -497,10 +505,10 @@ span {
 .rectangle {
   background-color: var(--primary-light);
   height: 170px;
-  width: 900px;
+  width: 1000px;
   margin-left: -90px;
   margin-top: 30px;
-  grid-column: span 2;
+  grid-column: 2/-2;
 }
 
 .info-block {
@@ -510,7 +518,7 @@ span {
 }
 
 .about {
-  grid-column: 2/-1;
+  grid-column: 2/-2;
   display: flex;
 }
 
@@ -529,15 +537,23 @@ span {
     align-self: center;
   }
   .rectangle {
-    grid-column: 3;
-    margin-left: none;
+    grid-column: 2/-2;
     width: auto;
     height: auto;
-    margin: 1em;
+    margin: 0.000000000000000001px;
   }
   .info-block {
     padding: 1em 2em;
     text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    grid-column: 1/-1;
+  }
+  .info-block {
+    padding: 0;
   }
 }
 
@@ -782,15 +798,14 @@ SINGLE IMAGE HERO FOR HILTON HOTELS  */
 }
 
 .contact-form {
-  grid-column: 2;
-  padding: 2em;
+  grid-column: 1/-1;
+  padding: 3em 1em;
   display: flex;
   flex-direction: column;
 }
 
-label {
-  justify-self: end;
-  margin-right: 2em;
+.input {
+  font-size: 1rem;
 }
 
 .form {
@@ -824,6 +839,7 @@ label {
   .contact-form {
     display: grid;
     grid-template-columns: 400px 1fr;
+    padding: 3em;
   }
 }
 @media (min-width: 600px) {
