@@ -829,6 +829,7 @@ label {
 
 .port-list-item {
   margin-top: 5px;
+  list-style: none;
 }
 
 .secondary-text {
