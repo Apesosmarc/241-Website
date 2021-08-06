@@ -445,7 +445,6 @@ span {
 .col-full {
   grid-column: 1/-1;
   padding: 7em 1em 3em;
-  margin: 8em 0;
 }
 
 .mission {
@@ -470,6 +469,7 @@ span {
 
   .col-full {
     grid-column: 2/-2;
+    margin: 8em 0;
   }
   .mission {
     padding: 3em;
@@ -633,11 +633,14 @@ span {
 }
 
 .x {
+  font-size: 2rem;
   color: var(--primary-dark);
   cursor: pointer;
   position: absolute;
+  z-index: 1000;
 }
 .x:hover {
+  color: var(--primary-color);
   transform: scale(1.2);
   opacity: 0.9;
   cursor: pointer;
@@ -707,9 +710,8 @@ span {
   margin: auto;
 }
 
-#sophies-content > .title-logo {
-  margin: 0;
-  font-size: 1.1rem;
+#sophies-content > .title-logo:after {
+  content: "Sophies Cuban";
 }
 
 .port-content:last-child {
@@ -724,6 +726,10 @@ span {
   /* IMAGE ROW FOR SINGLE IMAGE */
   .img-row-hero {
     max-height: 650px;
+  }
+
+  #sophies-content > .title-logo:after {
+    content: "Sophies Cuban Cuisine";
   }
 
   /* IMAGE ROW FOR DOUBLE IMAGES */
