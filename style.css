@@ -617,6 +617,13 @@ span {
 /* ==================
  Portfolio-lightbox Section
 ===================== */
+#hotels-content {
+  max-height: 700px;
+}
+
+#bond45-content {
+  max-height: 750px;
+}
 
 .exit-bar {
   font-size: 2em;
@@ -626,19 +633,19 @@ span {
 }
 
 .x {
-  color: var(--primary-color);
+  color: var(--primary-dark);
   cursor: pointer;
   position: absolute;
 }
 .x:hover {
-  opacity: 0.4;
+  transform: scale(1.2);
+  opacity: 0.9;
   cursor: pointer;
 }
 
 .port-info {
   width: 900px;
-  height: 750px;
-  min-height: 500px;
+  max-height: 850px;
   padding: 2em;
   background-color: #fff;
   border: 2px solid black;
@@ -646,14 +653,17 @@ span {
   overflow-x: hidden;
   font-size: 0.9rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .port-info > .title-logo {
   font-size: 3em;
+  margin: 0 auto;
 }
 
 .img-row {
-  margin: 2em 0;
+  margin: 2em 0 0;
   max-height: 350px;
   overflow: hidden;
   gap: 2em;
@@ -671,24 +681,25 @@ span {
 
 .port-content {
   width: 90%;
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
-/* 
-SINGLE IMAGE HERO FOR HILTON HOTELS  */
+/* SINGLE IMAGE HERO FOR HILTON HOTELS  */
 
 .port-content-hero {
   width: 100%;
+  object-fit: cover;
 }
 
 .port-copy {
+  line-height: 2em;
   display: flex;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  justify-self: center;
 }
 
-.port-copy > p {
-  width: 70%;
-  margin: auto;
+.port-copy-left-aligned {
+  text-align: left;
 }
 
 .port-list {
@@ -710,19 +721,15 @@ SINGLE IMAGE HERO FOR HILTON HOTELS  */
     display: none;
   }
 
-  .title-logo {
-    margin-bottom: 0.8em;
-  }
-
   /* IMAGE ROW FOR SINGLE IMAGE */
   .img-row-hero {
     max-height: 650px;
   }
 
   /* IMAGE ROW FOR DOUBLE IMAGES */
-  .img-row {
-    margin-bottom: 3em;
-  }
+  /* .img-row {
+    margin-bottom: em;
+  } */
 }
 
 @media (min-width: 600px) {
@@ -758,11 +765,10 @@ SINGLE IMAGE HERO FOR HILTON HOTELS  */
   .port-copy {
     font-size: 1.2rem;
     margin-top: 2em;
+    width: auto;
   }
   .port-content-hero {
     width: 80%;
-  }
-  .exit-bar {
   }
 }
 
