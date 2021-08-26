@@ -14,6 +14,7 @@
 * {
   box-sizing: border-box;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -469,7 +470,7 @@ span {
 
   .col-full {
     grid-column: 2/-2;
-    margin: 8em 0;
+    margin: 3em 0;
   }
   .mission {
     padding: 3em;
